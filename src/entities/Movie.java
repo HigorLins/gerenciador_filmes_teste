@@ -15,6 +15,14 @@ public class Movie {
 		this.elenco = elenco;
 		this.nota = nota;
 	}
+	
+	public Movie(Movie movie) {
+		this.nome= movie.getNome();
+		this.diretor= new Diretor(movie.getDiretor());
+		this.elenco=movie.getElenco();
+		this.nota= movie.getNota();
+	}
+	
 	public String getNome() {
 		return nome;
 	}
